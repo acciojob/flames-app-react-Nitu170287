@@ -55,18 +55,20 @@ const App = () => {
         placeholder="Enter first name"
         onChange={(e) => setFirstName(e.target.value.toLowerCase())}
         value={firstName}
+        data-testid="input1"
       />
       <input
         type="text"
         placeholder="Enter Second name"
         onChange={(e) => setSecondName(e.target.value.toLowerCase())}
         value={secondName}
+        data-testid="input2"
       />
-      <button onClick={handleCalculateBtn}>
+      <button onClick={handleCalculateBtn} data-testid="calculate_relationship">
         Calculate Relationship Future
       </button>
-      <button onClick={hadleClearBtn}>Clear</button>
-      <h3>{result}</h3>
+      <button onClick={hadleClearBtn} data-testid="clear">Clear</button>
+      <h3 data-testid="answer">{result}</h3>
     </div>
   );
 };
