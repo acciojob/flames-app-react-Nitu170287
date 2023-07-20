@@ -56,6 +56,7 @@ const App = () => {
         onChange={(e) => setFirstName(e.target.value.toLowerCase())}
         value={firstName}
         data-testid="input1"
+        name="name1"
       />
       <input
         type="text"
@@ -63,11 +64,14 @@ const App = () => {
         onChange={(e) => setSecondName(e.target.value.toLowerCase())}
         value={secondName}
         data-testid="input2"
+        name="name2"
       />
       <button onClick={handleCalculateBtn} data-testid="calculate_relationship">
         Calculate Relationship Future
       </button>
-      <button onClick={hadleClearBtn} data-testid="clear">Clear</button>
+      <button onClick={hadleClearBtn} data-testid="clear">
+        Clear
+      </button>
       <h3 data-testid="answer">{result}</h3>
     </div>
   );
